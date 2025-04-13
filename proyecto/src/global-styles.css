@@ -1,0 +1,149 @@
+@import url("https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,100..900;1,9..144,100..900&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Jost:ital,wght@0,100..900;1,100..900&display=swap");
+
+:root {
+  --bg-color: #fff;
+  --color-primary: #141c45;
+  --color-secondary: #da5812;
+  --font-family: Inter, "Arial", "Helvetica", sans-serif;
+}
+
+body {
+  height: 100vh;
+  font-family: var(--font-family);
+  line-height: 1;
+  background-color: var(--bg-color);
+}
+
+h1 {
+  font-size: 3rem;
+  font-weight: 500;
+}
+h2 {
+  font-size: 2rem;
+  font-weight: 600;
+}
+h3 {
+  font-size: 1.5rem;
+  font-weight: 500;
+}
+a {
+  text-decoration: none;
+  color: inherit;
+  cursor: pointer;
+}
+button {
+  display: inline-block;
+  padding: 12px 24px;
+  background-color: var(--color-primary);
+  color: #fff;
+  cursor: pointer;
+  border: none;
+  border-radius: 4px;
+  font-size: 16px;
+  font-weight: bold;
+  text-align: center;
+  text-decoration: none;
+  transition: background-color 0.3s ease;
+}
+button:hover {
+  background-color: var(--color-secondary);
+}
+
+.root {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  height: 100vh;
+}
+.main {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+  height: 100vh;
+  overflow-y: scroll;
+  position: relative;
+}
+
+.cabecera {
+  position: sticky;
+  padding: 48px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 48px;
+  top: 0;
+  width: 100%;
+  background-color: var(--bg-color);
+  z-index: 1;
+  border-bottom: 1px solid #e5e5e5;
+}
+.cabecera-h1 {
+  background-color: var(--bg-color);
+  text-align: center;
+}
+
+#listado-personajes {
+  box-sizing: border-box;
+  padding: 24px 0px;
+  width: 85%;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 350px));
+  grid-auto-flow: row;
+  justify-content: center;
+  gap: 20px;
+}
+.personajes-contenedor {
+  box-sizing: border-box;
+  display: grid;
+  grid-template-rows: repeat(auto-fit, minmax(250px, 1fr));
+  justify-items: center;
+  background-color: #fff;
+  border-radius: 8px;
+  border: 1px solid #f5f5f5;
+  padding: 32px;
+  box-shadow: rgba(0, 0, 0, 0.05) 0px 6px 24px 0px,
+    rgba(0, 0, 0, 0.08) 0px 0px 0px 1px;
+}
+.personajes-contenedor img {
+  max-height: 200px;
+}
+
+.contenedor-info-personaje {
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  align-items: flex-start;
+  gap: 10px;
+}
+
+.contenedor-info-personaje p {
+  line-height: 1.4;
+}
+
+.label-personaje{
+  font-weight: 600;
+}
+
+#formulario {
+  display: flex;
+  gap: 10px;
+  margin: 0 auto;
+}
+
+input {
+  box-sizing: border-box;
+  font-family: var(--font-family);
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  padding: 16px;
+}
+button[type="submit"] {
+  box-sizing: border-box;
+  width: 100%;
+  padding: 8px 24px;
+  border-radius: 4px;
+  cursor: pointer;
+}
